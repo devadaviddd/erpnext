@@ -1,0 +1,59 @@
+2023-11-20 09:32:46,445 DEBUG cd /workspaces/erpnext/frappe-bench && /usr/bin/python3 -m venv env
+2023-11-20 09:32:48,636 DEBUG cd /workspaces/erpnext/frappe-bench && /workspaces/erpnext/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2023-11-20 09:32:51,171 LOG Getting frappe
+2023-11-20 09:32:51,171 DEBUG cd frappe-bench/apps && git clone https://github.com/frappe/frappe.git --branch version-14 --depth 1 --origin upstream
+2023-11-20 09:33:05,537 LOG Installing frappe
+2023-11-20 09:33:05,538 DEBUG cd /workspaces/erpnext/frappe-bench && /workspaces/erpnext/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspaces/erpnext/frappe-bench/apps/frappe 
+2023-11-20 09:33:44,789 DEBUG cd /workspaces/erpnext/frappe-bench/apps/frappe && yarn install
+2023-11-20 09:34:09,157 DEBUG cd frappe-bench && bench build
+2023-11-20 09:34:09,325 INFO /usr/local/bin/bench build
+2023-11-20 09:34:21,115 LOG setting up backups
+2023-11-20 09:34:21,125 LOG backups were set up
+2023-11-20 09:34:21,125 INFO Bench frappe-bench initialized
+2023-11-20 09:34:28,904 INFO /usr/local/bin/bench start
+2023-11-20 09:34:29,681 INFO /usr/local/bin/bench schedule
+2023-11-20 09:34:29,687 INFO /usr/local/bin/bench watch
+2023-11-20 09:34:29,689 INFO /usr/local/bin/bench serve --port 8000
+2023-11-20 09:34:29,692 INFO /usr/local/bin/bench worker --queue long
+2023-11-20 09:34:29,693 INFO /usr/local/bin/bench worker --queue default
+2023-11-20 09:34:29,695 INFO /usr/local/bin/bench worker --queue short
+2023-11-20 09:34:57,192 INFO /usr/local/bin/bench new-site dcode.com
+2023-11-20 09:35:14,788 INFO /usr/local/bin/bench new-site khang.com
+2023-11-20 09:35:21,293 INFO /usr/local/bin/bench new-site khang-test.com
+2023-11-20 09:36:07,367 INFO /usr/local/bin/bench use khang-test.com
+2023-11-20 09:36:15,195 INFO /usr/local/bin/bench get-app payments
+2023-11-20 09:36:16,217 LOG Getting payments
+2023-11-20 09:36:16,217 DEBUG cd ./apps && git clone https://github.com/frappe/payments.git  --depth 1 --origin upstream
+2023-11-20 09:36:17,622 WARNING /usr/local/bin/bench get-app payments executed with exit code 1
+2023-11-20 09:38:25,332 INFO /usr/local/bin/bench get-app payments
+2023-11-20 09:38:26,706 LOG Getting payments
+2023-11-20 09:38:26,706 DEBUG cd ./apps && git clone https://github.com/frappe/payments.git  --depth 1 --origin upstream
+2023-11-20 09:38:28,221 WARNING /usr/local/bin/bench get-app payments executed with exit code 1
+2023-11-20 09:39:11,181 INFO /usr/local/bin/bench get-app payments
+2023-11-20 09:39:11,808 LOG Getting payments
+2023-11-20 09:39:11,808 DEBUG cd ./apps && git clone https://github.com/frappe/payments.git  --depth 1 --origin upstream
+2023-11-20 09:39:13,114 LOG Installing payments
+2023-11-20 09:39:13,308 DEBUG cd /workspaces/erpnext/frappe-bench && /workspaces/erpnext/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspaces/erpnext/frappe-bench/apps/payments 
+2023-11-20 09:39:21,157 DEBUG bench build --app payments
+2023-11-20 09:39:21,250 INFO /usr/local/bin/bench build --app payments
+2023-11-20 09:39:22,941 DEBUG cd /workspaces/erpnext/frappe-bench && supervisorctl restart frappe:
+2023-11-20 09:39:23,088 WARNING cd /workspaces/erpnext/frappe-bench && supervisorctl restart frappe: executed with exit code 7
+2023-11-20 09:39:23,088 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2023-11-20 09:39:57,742 INFO /usr/local/bin/bench get-app erpnext --branch version-14
+2023-11-20 09:39:58,366 LOG Getting erpnext
+2023-11-20 09:39:58,366 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-14 --depth 1 --origin upstream
+2023-11-20 09:40:09,285 LOG Installing erpnext
+2023-11-20 09:40:09,383 DEBUG cd /workspaces/erpnext/frappe-bench && /workspaces/erpnext/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspaces/erpnext/frappe-bench/apps/erpnext 
+2023-11-20 09:40:49,079 DEBUG cd /workspaces/erpnext/frappe-bench/apps/erpnext && yarn install
+2023-11-20 09:40:50,688 DEBUG bench build --app erpnext
+2023-11-20 09:40:50,807 INFO /usr/local/bin/bench build --app erpnext
+2023-11-20 09:40:56,446 DEBUG cd /workspaces/erpnext/frappe-bench && supervisorctl restart frappe:
+2023-11-20 09:40:56,609 WARNING cd /workspaces/erpnext/frappe-bench && supervisorctl restart frappe: executed with exit code 7
+2023-11-20 09:40:56,609 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2023-11-20 09:41:11,161 INFO /usr/local/bin/bench start
+2023-11-20 09:41:11,428 INFO /usr/local/bin/bench worker --queue short
+2023-11-20 09:41:11,428 INFO /usr/local/bin/bench worker --queue long
+2023-11-20 09:41:11,429 INFO /usr/local/bin/bench worker --queue default
+2023-11-20 09:41:11,432 INFO /usr/local/bin/bench watch
+2023-11-20 09:41:11,432 INFO /usr/local/bin/bench schedule
+2023-11-20 09:41:11,435 INFO /usr/local/bin/bench serve --port 8000
